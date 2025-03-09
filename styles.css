@@ -8,7 +8,6 @@
     height: 100vh;
     background: linear-gradient(125deg, #000000, #68223e, rgb(164, 75, 90), pink);
     padding: 10px;
-    
 }
 
 .to-do {
@@ -18,11 +17,12 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px; 
     border-radius: 10px;
-    }
+}
 
 .to-do h1{
     text-align: center;
     color: #68223e;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .textbar {
@@ -33,6 +33,7 @@
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+    box-sizing: border-box;
 }
 
 input {
@@ -40,6 +41,8 @@ input {
     border: none;
     outline: none;
     background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    color: #68223e;
 }
 
 button {
@@ -47,6 +50,56 @@ button {
     border: none;
     outline: none;
     padding-top: 4px;
-    padding-right: 5px;
-    
+    padding-right: 5px;   
+}
+
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    color: #68223e;
+    position: relative;
+    line-height: 2;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #c59cad;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(check.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #68223e;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: rgb(237, 169, 180);
 }
