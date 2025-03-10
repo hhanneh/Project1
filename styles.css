@@ -58,7 +58,7 @@ ul li {
     font-size: 16px;
     padding: 12px 8px 12px 50px;
     user-select: none;
-    cursor: pointer;
+    cursor: grab;
     font-family: 'Courier New', Courier, monospace;
     color: #68223e;
     position: relative;
@@ -102,4 +102,19 @@ ul li span{
 
 ul li span:hover {
     background: rgb(237, 169, 180);
+}
+
+ul li:active {
+    cursor: grabbing;
+    opacity: 0.6;
+}
+
+.taskcounter {
+    font-family: 'Courier New', Courier, monospace;
+    color: #68223e;
+    padding-top: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
