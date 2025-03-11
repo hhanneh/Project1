@@ -6,8 +6,12 @@
 .container {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(125deg, #000000, #68223e, rgb(164, 75, 90), pink);
     padding: 10px;
+    background: url('flowers.png'), 
+                linear-gradient(125deg, #000000, #68223e, rgb(164, 75, 90), pink);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .to-do {
